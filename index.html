@@ -419,7 +419,7 @@ function renderAll(){renderDashboard();renderStudents();renderDaySlider();render
 renderAll();
 /* ---------- PWA ---------- */
 const ICON='icon.png';
-const manifest={name:'دفتر مدیریت کلاسی هوشمند',short_name:'دفتر کلاسی',start_url:location.href.split('#')[0],display:'standalone',background_color:'#f6f4ff',theme_color:'#7c5cff',icons:[{src:ICON,sizes:'512x512',type:'image/png',purpose:'any'}]};
+const manifest={name:'دفتر مدیریت کلاسی هوشمند',short_name:'دفتر کلاسی',start_url:'./',display:'standalone',background_color:'#f6f4ff',theme_color:'#7c5cff',icons:[{src:'icon.png',sizes:'192x192',type:'image/png'},{src:'icon.png',sizes:'512x512',type:'image/png'}]};
 const mLink=document.createElement('link');mLink.rel='manifest';mLink.href=URL.createObjectURL(new Blob([JSON.stringify(manifest)],{type:'application/json'}));document.head.appendChild(mLink);
 let deferredPrompt=null;const ib=document.getElementById('installBtn');
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;ib.style.display=''});
